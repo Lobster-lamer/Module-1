@@ -12,10 +12,10 @@ class Person:
 
 if __name__ == "__main__":
     Student1 = Person("Dude", 666, True)
-    print(f"Hey, {CTS.color["PURPLE"]}{Student1.name}{CTS.color["WHITE"]}, you've been "
-          f"{CTS.color["PURPLE"]}{Student1.age}{CTS.color["WHITE"]} yesterday!")
+    print(f"Hey, {CTS.Color.PURPLE}{Student1.name}{CTS.Color.WHITE}, you've been "
+          f"{CTS.Color.PURPLE}{Student1.age}{CTS.Color.WHITE} yesterday!")
     Student1.age += 1
-    print(f"Today your birthday! So, HAPPY {CTS.color["PURPLE"]}{Student1.age}{CTS.color["WHITE"]}th"
+    print(f"Today your birthday! So, HAPPY {CTS.Color.PURPLE}{Student1.age}{CTS.Color.WHITE}th"
           f" BIRTHDAY, Hell's baron!")
     if Student1.is_student:
         print("Don't forget, that you're a student now, loser")

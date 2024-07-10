@@ -17,9 +17,9 @@ if __name__ == "__main__":
     python_course_stat = CourseStatistic(12, 1.5, "Python")
     print("ПОМОГИТЕ!!! МОЙ КОМП СЛЕДИТ ЗА МНОЙ!!! ОН ДАЖЕ ЗНАЕТ КАКОЙ Я КУРС ПРОХОЖУ!!!")
     print("САМИ СМОТРИТЕ!!!")
-    print(f"{CTS.ITALIC}{CTS.color["BLUE"]}Курс:{CTS.color["PURPLE"]}{python_course_stat.course_name}{CTS.color["BLUE"]},"
-          f"всего задач:{CTS.color["PURPLE"]}{python_course_stat.exercise_done}{CTS.color["BLUE"]}, "
-          f"затрачено часов: {CTS.color["PURPLE"]}{python_course_stat.hours_spend}{CTS.color["BLUE"]},"
-          f" среднее время выполнения {CTS.color["PURPLE"]}{python_course_stat.hours_per_exercise}{CTS.color["BLUE"]} часа."
-          f"{CTS.color["WHITE"]}")
+    print(f"{CTS.ITALIC}{CTS.Color.BLUE}Курс:{CTS.Color.PURPLE}{python_course_stat.course_name}{CTS.Color.BLUE},"
+          f"всего задач:{CTS.Color.PURPLE}{python_course_stat.exercise_done}{CTS.Color.BLUE}, "
+          f"затрачено часов: {CTS.Color.PURPLE}{python_course_stat.hours_spend}{CTS.Color.BLUE},"
+          f" среднее время выполнения {CTS.Color.PURPLE}{python_course_stat.hours_per_exercise}{CTS.Color.BLUE} часа."
+          f"{CTS.Color.WHITE}")
     print("ААААААААААААААААА!!!")

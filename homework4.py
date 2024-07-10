@@ -1,20 +1,12 @@
 from consoleTextStyle import ConsoleTextStyle as CTS
 
 
-def purple_text(func, func_container):
-    print(CTS.color["PURPLE"], end="")
-    func(func_container)
-    print(CTS.color["WHITE"], end="")
-
-
-def cyan_text(func, func_container):
-    print(CTS.color["DARKCYAN"], end="")
-    func(func_container)
-    print(CTS.color["WHITE"], end="")
+def scammer_text(func_container):
+    CTS.colorful_text(func_container, CTS.Color.PURPLE)
 
 
 def environment_sound(func_container):
-    print(CTS.color["GREEN"]+CTS.ITALIC)
+    print(CTS.Color.GREEN+CTS.ITALIC)
     print("--", end="")
     print(func_container, end="")
     print("--")
@@ -23,22 +15,22 @@ def environment_sound(func_container):
 
 dialog_phrase = "-Здравствуйте, Вас беспокоит защита сбербанка!"
 print("-Алло?")
-purple_text(print, dialog_phrase)
+scammer_text(dialog_phrase)
 print("-Я не понял, что вы сказали, повторите ещё раз")
-purple_text(print, dialog_phrase.upper())
+scammer_text(dialog_phrase.upper())
 print("-НЕ ПОВЫШАЙТЕ НА МЕНЯ РЕГИСТР!")
-purple_text(print, dialog_phrase.lower)
+scammer_text(dialog_phrase.lower)
 print("-НЕ ПОНИЖАЙТЕ НА МЕНЯ РЕГИСТР! ПОЧЕМУ ВЫ ТАК МЕДЛЕННО ГОВОРИТЕ? ДУМАЕТЕ Я ТУПОЙ?")
-purple_text(print, dialog_phrase.replace(" ", ""))
+scammer_text(dialog_phrase.replace(" ", ""))
 print("-ПОЧЕМУ ВЫ ТАК БЫСТРО ГОВОРИТЕ?")
-purple_text(print, dialog_phrase[0:2]+"...")
+scammer_text(dialog_phrase[0:2]+"...")
 print("-Всё-всё, я внимательно вас слушаю")
-purple_text(print, "-..."+dialog_phrase[-2:])
+scammer_text("-..."+dialog_phrase[-2:])
 print("-Ну куда вы так спешите? Давайте ещё раз...")
-purple_text(print, "-ОЙ, ДА ИДИТЕ НАФИГ!!!")
+scammer_text("-ОЙ, ДА ИДИТЕ НАФИГ!!!")
 environment_sound("звонок окончен")
 print("-Гы-гы) Нефиг мне звонить)")
-cyan_text(print, "-Кто это был?")
+CTS.colorful_text("-Кто это был?", CTS.Color.CYAN)
 print("-Звонили мошенники, сказали:\"" + dialog_phrase[-len(dialog_phrase)+1:] + "\"")
 print("..." + "\"" + dialog_phrase[-len(dialog_phrase)+1:], "\"... Ого! Эти люди становятся умнее, фразу из " +
       str(len(dialog_phrase)) + " букв выучили!\n ...Так! А кто меня спрашивал: \"Кто это был?\"")

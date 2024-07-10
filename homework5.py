@@ -24,8 +24,8 @@ class RoomRenter:
 
     def __str__(self):
         return CTS.colorful_str(f"Имя: {self.name},"
-                          f" номер комнаты: {self.room_number},"
-                          f" заехал: {self.check_in_date}", "BLUE")
+                                f" номер комнаты: {self.room_number},"
+                                f" заехал: {self.check_in_date}", CTS.Color.BLUE)
 
 
 if __name__ == "__main__":
@@ -35,7 +35,7 @@ if __name__ == "__main__":
         immutable_var[0] = "Должник"
     except TypeError:
         CTS.colorful_text("Ну нельзя менять неизменняемое содержимое tuple объектов, ну ты шо?",
-                          "RED")
+                          CTS.Color.RED)
     print("Вот так вот!(")
 
     immutable_var = (RoomRenter("Dude", 1, str_to_date("2024.07.10")),
@@ -55,7 +55,8 @@ if __name__ == "__main__":
     print(mutable_var[-1])
     print("Каеф) Всё работает) Имя у него какое-то странное...")
 
-    print("\nЗараза, он всех сожрал. Надо всех выписать( И с самим зерглингом что-то сделать. Как его вообще заселили?!")
+    print(
+        "\nЗараза, он всех сожрал. Надо всех выписать( И с самим зерглингом что-то сделать. Как его вообще заселили?!")
     mutable_var.remove(mutable_var[0])
     mutable_var.remove(mutable_var[0])
     for room_renter in mutable_var:

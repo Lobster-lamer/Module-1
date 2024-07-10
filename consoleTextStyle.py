@@ -4,14 +4,15 @@ class ConsoleTextStyle:
 
     И всё.
     """
-    color = {"PURPLE": '\033[95m',
-    "CYAN": '\033[96m',
-    "DARKCYAN": '\033[36m',
-    "BLUE": '\033[94m',
-    "GREEN": '\033[92m',
-    "YELLOW": '\033[93m',
-    "RED": '\033[91m',
-    "WHITE" : '\033[0m'}
+    class Color:
+        PURPLE = '\033[95m'
+        CYAN = '\033[96m'
+        DARKCYAN = '\033[36m'
+        BLUE = '\033[94m'
+        GREEN = '\033[92m'
+        YELLOW = '\033[93m'
+        RED = '\033[91m'
+        WHITE = '\033[0m'
 
     BOLD = "\x1B[1m"
     ITALIC = "\x1B[3m"
@@ -20,16 +21,16 @@ class ConsoleTextStyle:
     REGULAR = "\x1B[0m"
 
     @staticmethod
-    def colorful_text(print_container, text_color):
+    def colorful_text(print_container, text_color: Color):
         """
         Сразу выводит в консоль покрашенный текст
 
         :param print_container: выводимый текст
         :param text_color: цвет из переменной класса color (доделать)
         """
-        print(ConsoleTextStyle.color[text_color], end="")
+        print(text_color, end="")
         print(print_container, end="")
-        print(ConsoleTextStyle.color["WHITE"])
+        print(ConsoleTextStyle.Color.WHITE)
 
     @staticmethod
     def colorful_str(print_container: str,
@@ -41,4 +42,4 @@ class ConsoleTextStyle:
             :param text_color: цвет из переменной класса color (доделать)
             :return: Покрашенный текст в str
         """
-        return ConsoleTextStyle.color[text_color] + print_container + ConsoleTextStyle.color["WHITE"]
+        return text_color + print_container + ConsoleTextStyle.Color.WHITE
