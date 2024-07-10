@@ -22,6 +22,8 @@ answerer = {
     "Гыъь)": "ГЫЪЬ)"
 }
 
+girl_interest_set = {"Бухать", "Гулять", "Кодить"}
+
 if __name__ == "__main__":
     print("Тыак, интересно что за разговорного бота он написал...\nСеръёзно? Словарь? Ладно, что там в словаре есть?")
     CTS.colorful_text(answerer, CTS.Color.PURPLE)
@@ -37,7 +39,24 @@ if __name__ == "__main__":
     print(answerer.pop("Гыъь)"))
     print("Прикольно, но нафиг оно в словаре нужно, шо там у нас получилось?")
     CTS.colorful_text(answerer, CTS.Color.PURPLE)
-    print("Попробуем пообщаться...\n")
-    CTS.colorful_text(answerer["Привет!"], CTS.Color.PURPLE)
-    start_talking(answerer, "Ну и хрень")
-    print("Надо удалить весь этот код, пока никто не увидел")
+    print("Ну и хрень")
+    print("Надо удалить весь этот код, пока никто не увидел\n")
+    CTS.colorful_text("Привет, красавчик!", CTS.Color.CYAN)
+    print("ЖЕНЩИНА!!!")
+    CTS.colorful_text("Не хочет ли такой красивый стереотипный программист заплатить за мой кофе?",
+                      CTS.Color.CYAN)
+    print(CTS.ITALIC + "Странно, от меня не только не убежала девушка, но и сама подошла! похоже на обман!\n"
+          + CTS.REGULAR + "А чем ты интересуешься?")
+    CTS.colorful_text("sdfafghdsdfsxgfdsfg", CTS.Color.CYAN)
+    print(CTS.ITALIC + "Не понимаю я женщин( Ладно, запрошу множество её интересов... Как оно там..."
+          + CTS.REGULAR + "requst.get(interest)... SUDO!")
+    CTS.colorful_text(girl_interest_set, CTS.Color.BLUE)
+    print("КОДИТЬ!!! ОНА ЛЮБИТ КОДИТЬ!!!... Хотя я б кое чё добавил...")
+    girl_interest_set.add("Warhammer 40 000")
+    print(girl_interest_set)
+    print("О!.. Ещё бы я кое-что убрал бы...")
+    girl_interest_set.discard("Бухать")
+    girl_interest_set.remove("Гулять")
+    CTS.colorful_text(girl_interest_set, CTS.Color.BLUE)
+    CTS.colorful_text("БОЛЬШЕ ЧЕРЕПОВ БОГУ ЧЕРЕПОВ!!!", CTS.Color.CYAN)
+    print("О! Вот теперь шикарно!")
